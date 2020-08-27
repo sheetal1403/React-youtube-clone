@@ -5,12 +5,12 @@ import VideoItem from './VideoItem/VideoItem';
 
 const videoList = props => {
 
-    const videos = props.videos.map(video => {
-        return <VideoItem video={video} key={video.id.videoId}/>
+    const videos = props.videos.map((video, id) => {
+        return <VideoItem video={video} key={video.id.videoId} clicked={() => props.clicked(id)}/>
     })
 
     return (
-        <Grid container spacing={8}>
+        <Grid container spacing={3}>
             {videos}
         </Grid>
     )

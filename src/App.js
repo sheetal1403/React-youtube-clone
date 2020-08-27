@@ -36,6 +36,13 @@ class App extends Component{
     
   } 
 
+  onVideoClickHandler = (id) => {
+    const selectedVideo = this.state.videos[id];
+    this.setState({
+      selectedVideo
+    })
+  }
+
   render(){
     return (
       <Grid container spacing={2}>
@@ -43,7 +50,7 @@ class App extends Component{
           <Grid justify="center" container spacing={2}>
             <Grid  item xs={8}><SearchBar onFormSubmit = {this.onFormSubmitHandler}/></Grid>
             <Grid item xs={8}><VideoDetails video={this.state.selectedVideo}/></Grid>
-            <Grid item xs={4}><VideoList videos = {this.state.videos}/></Grid>
+            <Grid item xs={4}><VideoList clicked = {this.onVideoClickHandler} videos = {this.state.videos}/></Grid>
           </Grid>
         </Grid>
       </Grid>

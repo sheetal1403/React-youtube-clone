@@ -9,7 +9,7 @@ const videoDetails = props => {
 
     return (
         <React.Fragment>
-            <Paper elevation={3}>
+            <Paper elevation={3} style={{height: '100%'}}>
                 <iframe height="100%" width="100%" title="Video Player" src={videoSource}/>
             </Paper>
 
