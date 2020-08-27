@@ -10,9 +10,13 @@ const videoList = props => {
     })
 
     return (
-        <Grid container spacing={3}>
-            {videos}
-        </Grid>
+        <React.Fragment>
+            <h4>Related videos</h4>
+            <Grid container spacing={3}>
+                {videos}
+             </Grid>
+        </React.Fragment>
+        
     )
 };
 

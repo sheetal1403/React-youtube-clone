@@ -1,5 +1,6 @@
 import React from 'react';
 import { Paper, Typography } from '@material-ui/core';
+import './VideoDetails.css';
 
 const videoDetails = props => {
 
@@ -9,13 +10,13 @@ const videoDetails = props => {
 
     return (
         <React.Fragment>
-            <Paper elevation={3} style={{height: '100%'}}>
-                <iframe height="100%" width="100%" title="Video Player" src={videoSource}/>
+            
+            <Paper elevation={3} style={{height:'70%'}}>
+                <iframe title="Video Player" width="100%" height="100%" src={videoSource}/>
+                <Typography variant="h6" className="Title">{props.video.snippet.title} - {props.video.snippet.channelTitle}</Typography>    
             </Paper>
-
-            <Paper>
-                <Typography variant="h6">{props.video.snippet.title} - {props.video.snippet.channelTitle}</Typography>
-            </Paper>
+            
+            
 
         </React.Fragment>
     )

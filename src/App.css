@@ -1,0 +1,10 @@
+.App{
+    padding: 20px;
+    margin: 0;
+}
+
+.MuiGrid-item.Welcome{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 200px;
+}

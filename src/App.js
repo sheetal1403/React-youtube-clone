@@ -5,6 +5,7 @@ import youtubeAxios from './api/axios-youtube';
 import SearchBar from './components/SearchBar/SearchBar';
 import VideoDetails from './components/VideoDetails/VideoDetails';
 import VideoList from './components/VideoList/VideoList';
+import './App.css';
 
 class App extends Component{
 
@@ -44,13 +45,30 @@ class App extends Component{
   }
 
   render(){
+
+    const welcomeMessage = (
+      <Grid item xs={12} className="Welcome">Search for any video!</Grid>
+    )
+
+    let videoContent = welcomeMessage;
+
+    if(this.state.selectedVideo){
+      videoContent = (
+        <React.Fragment>
+           <Grid item xs={12} sm={8}><VideoDetails video={this.state.selectedVideo}/></Grid>
+           <Grid item xs={12} sm={4}><VideoList clicked = {this.onVideoClickHandler} videos = {this.state.videos}/></Grid>
+        </React.Fragment>
+       
+      )
+    }
+
+
     return (
-      <Grid container spacing={2}>
+      <Grid container spacing={0} className="App">
         <Grid item xs={12}>
           <Grid justify="center" container spacing={2}>
             <Grid  item xs={8}><SearchBar onFormSubmit = {this.onFormSubmitHandler}/></Grid>
-            <Grid item xs={8}><VideoDetails video={this.state.selectedVideo}/></Grid>
-            <Grid item xs={4}><VideoList clicked = {this.onVideoClickHandler} videos = {this.state.videos}/></Grid>
+            {videoContent}
           </Grid>
         </Grid>
       </Grid>

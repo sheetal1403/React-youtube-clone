@@ -7,7 +7,7 @@ const videoItem = props => {
             <Grid item xs={12} onClick={props.clicked}>
                 <Paper className="VideoItem" elevation={3}>
                 <img alt="thumbnail-img" src={props.video.snippet.thumbnails.default.url}/>
-                <p>{props.video.snippet.title}</p>
+                <p style={{paddingLeft:'8px'}}>{props.video.snippet.title}</p>
                 </Paper>
             </Grid>   
         )
