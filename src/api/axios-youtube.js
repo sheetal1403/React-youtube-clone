@@ -5,7 +5,7 @@ const instance = axios.create({
     params:{
         part: 'snippet',
         maxResults: 5,
-        key: '[API_KEY]'
+        key: '[API_K]'
     }
 });
 
