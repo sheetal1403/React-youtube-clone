@@ -23,7 +23,7 @@ class App extends Component{
         }
       });
       console.log(response.data.items);
-      
+
       this.setState({
         videos: response.data.items,
         selectedVideo: response.data.items[0]
@@ -41,7 +41,7 @@ class App extends Component{
         <Grid item xs={12}>
           <Grid justify="center" container spacing={2}>
             <Grid  item xs={8}><SearchBar onFormSubmit = {this.onFormSubmitHandler}/></Grid>
-            <Grid item xs={8}><VideoDetails/></Grid>
+            <Grid item xs={8}><VideoDetails video={this.state.selectedVideo}/></Grid>
             <Grid item xs={4}>VIDEO LIST</Grid>
           </Grid>
         </Grid>
