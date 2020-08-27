@@ -4,6 +4,7 @@ import youtubeAxios from './api/axios-youtube';
 
 import SearchBar from './components/SearchBar/SearchBar';
 import VideoDetails from './components/VideoDetails/VideoDetails';
+import VideoList from './components/VideoList/VideoList';
 
 class App extends Component{
 
@@ -42,7 +43,7 @@ class App extends Component{
           <Grid justify="center" container spacing={2}>
             <Grid  item xs={8}><SearchBar onFormSubmit = {this.onFormSubmitHandler}/></Grid>
             <Grid item xs={8}><VideoDetails video={this.state.selectedVideo}/></Grid>
-            <Grid item xs={4}>VIDEO LIST</Grid>
+            <Grid item xs={4}><VideoList videos = {this.state.videos}/></Grid>
           </Grid>
         </Grid>
       </Grid>
