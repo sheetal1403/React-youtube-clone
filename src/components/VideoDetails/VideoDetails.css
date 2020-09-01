@@ -3,5 +3,16 @@
 }
 
 .Title{
-    margin-bottom: 10px;
+   padding: 10px 0 10px 10px;
+   margin:0;
+}
+
+.Frame{
+    height: 25rem;
+}
+
+@media screen and (max-width: 700px){
+    .Frame{
+        height: 15rem;
+    }
 }

@@ -55,8 +55,8 @@ class App extends Component{
     if(this.state.selectedVideo){
       videoContent = (
         <React.Fragment>
-           <Grid item xs={12} sm={8}><VideoDetails video={this.state.selectedVideo}/></Grid>
-           <Grid item xs={12} sm={4}><VideoList clicked = {this.onVideoClickHandler} videos = {this.state.videos}/></Grid>
+           <Grid item xs={12} md={8}><VideoDetails video={this.state.selectedVideo}/></Grid>
+           <Grid item xs={12} md={4}><VideoList clicked = {this.onVideoClickHandler} videos = {this.state.videos}/></Grid>
         </React.Fragment>
        
       )

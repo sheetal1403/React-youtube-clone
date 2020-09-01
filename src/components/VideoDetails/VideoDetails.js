@@ -11,8 +11,8 @@ const videoDetails = props => {
     return (
         <React.Fragment>
             
-            <Paper elevation={3} style={{height:'70%'}}>
-                <iframe title="Video Player" width="100%" height="100%" src={videoSource}/>
+            <Paper elevation={3}>
+                <iframe title="Video Player" width="100%" src={videoSource} className='Frame'/>
                 <Typography variant="h6" className="Title">{props.video.snippet.title} - {props.video.snippet.channelTitle}</Typography>    
             </Paper>
             
