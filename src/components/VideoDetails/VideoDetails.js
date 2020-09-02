@@ -6,7 +6,7 @@ const videoDetails = props => {
 
     if(!props.video) return <div>Loading...</div>
 
-    const videoSource = `http://www.youtube.com/embed/${props.video.id.videoId}`
+    const videoSource = `https://www.youtube.com/embed/${props.video.id.videoId}`
 
     return (
         <React.Fragment>
