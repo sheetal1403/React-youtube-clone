@@ -3,6 +3,9 @@ This is a responsive youtube clone app, where one can search for videos and 5 re
 
 ## Project preview:
 #### https://youtube-clone-1403.netlify.app/
+  
+## Avg time duration
+1 week
 
 ## Snapshots
 
